@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Product } from '../product.model';
 
 @Component({
@@ -18,5 +18,6 @@ export class ProductListComponent {
     new  Product("Playera7","Playera Nueva","https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/15.jpg",199),
     new  Product("Playera8","Playera Nueva","https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12.jpg" ,120)
   ]
+  
 
 }
