@@ -8,6 +8,8 @@ import { ProductListComponent } from './products/product-list/product-list.compo
 import { FooterComponent } from './footer/footer.component';
 import { ProductComponent } from './products/product/product.component';
 import { ProductItemComponent } from './products/product-item/product-item.component';
+import { ProductDetailComponent } from './products/product-detail/product-detail.component';
+import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
 
 
 @NgModule({
@@ -17,11 +19,13 @@ import { ProductItemComponent } from './products/product-item/product-item.compo
     ProductListComponent,
     FooterComponent,
     ProductComponent,
-    ProductItemComponent
+    ProductItemComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MdbModalModule
   ],
   providers: [],
   bootstrap: [AppComponent]
