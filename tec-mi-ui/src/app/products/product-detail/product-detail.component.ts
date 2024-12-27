@@ -9,6 +9,10 @@ import { Product } from '../product.model';
 })
 export class ProductDetailComponent {
   product!:Product;
+
+  sizes:string[] = ["S","M","L"];
+  selectedValue = "S";
+
   constructor(public modalRef: MdbModalRef<ProductDetailComponent>) {}
 
 }

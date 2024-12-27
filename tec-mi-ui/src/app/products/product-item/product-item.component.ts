@@ -17,7 +17,7 @@ export class ProductItemComponent {
   openModal() {
     this.modalRef = this.modalService.open(ProductDetailComponent, 
       {
-        modalClass: 'modal-xl',
+        modalClass: 'modal-lg',
         data:{product: this.product}
     });
   }

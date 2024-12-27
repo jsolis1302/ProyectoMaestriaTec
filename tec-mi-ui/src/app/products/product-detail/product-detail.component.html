@@ -23,16 +23,26 @@
           </div>
           </a>
         </div>
-        <div class="card-body">
-          <a href="" class="text-reset ">
-          <p>{{product.description}}</p>
-          </a>
-          <h6 class="mb-3 price">${{product.price}}</h6>
-        </div>
+
 
       </div>
       <div class="col">
-        form goes here
+        <div class="card-body">
+          <h3 class="modal-title" id="exampleModalLabel">{{product.name}}</h3>
+          <p>{{product.description}}</p>
+
+          <form action="">
+            <div class="form-group">
+              <select class="form-select" aria-label="Seleccionar Talla" [(ngModel)]="selectedValue" name="size">
+                <option *ngFor="let size of sizes" [value]="size">
+                    {{size}}
+                </option>
+              </select>
+
+            </div>
+          </form>
+          <h6 class="mb-3 price">${{product.price}}</h6>
+        </div>
       </div>
 
     </div>
