@@ -13,6 +13,8 @@ import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
 import { MdbFormsModule } from 'mdb-angular-ui-kit/forms';
 import { FormsModule } from '@angular/forms';
 import { AdminComponent } from './admin/admin/admin.component';
+import { UserComponent } from './users/user/user.component';
+
 
 
 @NgModule({
@@ -25,6 +27,8 @@ import { AdminComponent } from './admin/admin/admin.component';
     ProductItemComponent,
     ProductDetailComponent,
     AdminComponent,
+    UserComponent,
+
   ],
   imports: [
     BrowserModule,
