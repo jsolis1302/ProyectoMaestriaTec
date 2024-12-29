@@ -12,6 +12,7 @@ import { ProductDetailComponent } from './products/product-detail/product-detail
 import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
 import { MdbFormsModule } from 'mdb-angular-ui-kit/forms';
 import { FormsModule } from '@angular/forms';
+import { AdminComponent } from './admin/admin/admin.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { FormsModule } from '@angular/forms';
     ProductComponent,
     ProductItemComponent,
     ProductDetailComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,
