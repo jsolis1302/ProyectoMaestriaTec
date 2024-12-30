@@ -14,6 +14,7 @@ import { MdbFormsModule } from 'mdb-angular-ui-kit/forms';
 import { FormsModule } from '@angular/forms';
 import { AdminComponent } from './admin/admin/admin.component';
 import { UserComponent } from './users/user/user.component';
+import { ShoppingListComponent } from './cart/shopping-list/shopping-list.component';
 
 
 
@@ -28,6 +29,7 @@ import { UserComponent } from './users/user/user.component';
     ProductDetailComponent,
     AdminComponent,
     UserComponent,
+    ShoppingListComponent,
 
   ],
   imports: [
