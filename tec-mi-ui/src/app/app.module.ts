@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { AdminComponent } from './admin/admin/admin.component';
 import { UserComponent } from './users/user/user.component';
 import { ShoppingListComponent } from './cart/shopping-list/shopping-list.component';
+import { SharedService } from './shared/shared.service';
 
 
 
@@ -39,7 +40,7 @@ import { ShoppingListComponent } from './cart/shopping-list/shopping-list.compon
     MdbFormsModule,
     FormsModule
   ],
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
