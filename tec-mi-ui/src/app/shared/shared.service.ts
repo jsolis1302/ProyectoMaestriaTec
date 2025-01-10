@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../products/product.model';
 import { Item } from './item';
+import { Client } from './client.model';
 
 @Injectable({
   providedIn: 'root'
@@ -24,6 +25,8 @@ export class SharedService {
     new  Product(7,"Playera7","Playera Nueva","https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/15.jpg",199,"001"),
     new  Product(8,"Playera8","Playera Nueva ideaal para el trabajo o una salida casual, 100% algodon","https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12.jpg" ,120,"001")
   ]
+
+  user:Client = new Client("Jorge","Jorge.solis@mail.com",552211447,1,"A");
 
   constructor() { }
 }
