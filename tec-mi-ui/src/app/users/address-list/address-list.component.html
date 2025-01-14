@@ -1,1 +1,10 @@
-<p>address-list works!</p>
+<!-- <div class="col-lg-3 col-md-6 mb-4" *ngFor="let  address of addresses">
+    <app-address-item  [address]="address"></app-address-item>
+  </div> -->
+  <ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between align-items-start"
+    *ngFor="let  address of addresses">
+    <app-address-item  [address]="address"></app-address-item>
+    </li>
+  </ul>
+

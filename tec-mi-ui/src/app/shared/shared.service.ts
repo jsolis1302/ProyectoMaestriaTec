@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Product } from '../products/product.model';
 import { Item } from './item';
 import { Client } from './client.model';
+import { Address } from './address.model';
 
 @Injectable({
   providedIn: 'root'
@@ -27,6 +28,11 @@ export class SharedService {
   ]
 
   user:Client = new Client("Jorge","Jorge.solis@mail.com",552211447,1,"A");
+
+  address1:Address = new Address("Calle 21","32","Merida","Yucatan",97302,"Mexico",1,"Casa")
+  address2:Address = new Address("Calle 22","32","Merida","Yucatan",97300,"Mexico",1,"Oficina")
+
+  addresses:Address[] = [this.address1,this.address2]
 
   constructor() { }
 }

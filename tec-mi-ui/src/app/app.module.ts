@@ -18,6 +18,7 @@ import { ShoppingListComponent } from './cart/shopping-list/shopping-list.compon
 import { SharedService } from './shared/shared.service';
 import { UserInfoComponent } from './users/user-info/user-info.component';
 import { AddressListComponent } from './users/address-list/address-list.component';
+import { AddressItemComponent } from './users/address-list/address-item/address-item.component';
 
 
 
@@ -35,6 +36,7 @@ import { AddressListComponent } from './users/address-list/address-list.componen
     ShoppingListComponent,
     UserInfoComponent,
     AddressListComponent,
+    AddressItemComponent,
 
   ],
   imports: [
