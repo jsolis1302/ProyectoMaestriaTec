@@ -19,6 +19,11 @@ public class ProductController {
     @Autowired
     ProductService productService;
 
+    @GetMapping("allActiveProducts")
+    public ResponseEntity <List<Product>> getAllActiveProducts(){
+        return productService.getAllActiveProducts();
+    }
+
     @GetMapping("allProducts")
     public ResponseEntity <List<Product>> getAllProducts(){
         return productService.getAllProducts();

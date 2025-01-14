@@ -16,9 +16,21 @@ public class ProductService {
     @Autowired
     ProductDao productDao;
 
+    public ResponseEntity<List<Product>> getAllActiveProducts() {
+        try{
+
+            return new ResponseEntity<>(productDao.findAllByActive(true),HttpStatus.OK);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+        return new ResponseEntity<>(new ArrayList<>(), HttpStatus.BAD_REQUEST);
+    }
+
     public ResponseEntity<List<Product>> getAllProducts() {
         try{
             return new ResponseEntity<>(productDao.findAll(),HttpStatus.OK);
+
         }
         catch (Exception e){
             e.printStackTrace();
