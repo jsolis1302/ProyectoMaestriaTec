@@ -6,6 +6,8 @@ import { UserComponent } from './users/user/user.component';
 import { ShoppingListComponent } from './cart/shopping-list/shopping-list.component';
 import { UserInfoComponent } from './users/user-info/user-info.component';
 import { AddressListComponent } from './users/address-list/address-list.component';
+import { OrderComponent } from './orders/order/order.component';
+import { UserListComponent } from './users/user-list/user-list.component';
 
 
 const routes: Routes = [
@@ -17,7 +19,19 @@ const routes: Routes = [
       { path: ':clientId/address', component: AddressListComponent },
     ] 
   },
-  { path: 'admin', component:AdminComponent},
+  
+  
+  { path: 'admin', component:AdminComponent,
+    children:[
+      { path: 'orders', component: OrderComponent },
+      { path: 'clients', component: UserListComponent },
+      
+    ] 
+  },
+
+
+
+
   { path: 'cart', component:ShoppingListComponent},
   
   

@@ -19,6 +19,8 @@ import { SharedService } from './shared/shared.service';
 import { UserInfoComponent } from './users/user-info/user-info.component';
 import { AddressListComponent } from './users/address-list/address-list.component';
 import { AddressItemComponent } from './users/address-list/address-item/address-item.component';
+import { OrderComponent } from './orders/order/order.component';
+import { UserListComponent } from './users/user-list/user-list.component';
 
 
 
@@ -37,6 +39,8 @@ import { AddressItemComponent } from './users/address-list/address-item/address-
     UserInfoComponent,
     AddressListComponent,
     AddressItemComponent,
+    OrderComponent,
+    UserListComponent,
 
   ],
   imports: [

@@ -11,7 +11,7 @@
             <div class="container-fluid">
       
               <!-- Navbar brand -->
-              <a class="navbar-brand" href="#">Categories:</a>
+              <a class="navbar-brand" href="#">Admin</a>
       
               <!-- Toggle button -->
               <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,24 +24,21 @@
       
                   <!-- Link -->
                   <li class="nav-item acitve">
-                    <a class="nav-link text-white" href="#">All</a>
+                    <a class="nav-link text-white" routerLink="clients">Clientes</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Shirts</a>
+                    <a class="nav-link text-white"  routerLink="orders">Ordenes</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Sport wears</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Outwears</a>
+                    <a class="nav-link text-white" href="#">Productos</a>
                   </li>
       
                 </ul>
       
                 <!-- Search -->
-                <form class="w-auto py-1" style="max-width: 12rem">
+                <!-- <form class="w-auto py-1" style="max-width: 12rem">
                   <input type="search" class="form-control rounded-0" placeholder="Search" aria-label="Search">
-                </form>
+                </form> -->
       
               </div>
             </div>
@@ -51,7 +48,7 @@
             <div class="text-center">
                 <div class="row">
                     <div class="col-lg-3 col-md-6 mb-4">
-                        <h2>Admin works</h2>
+                      <router-outlet></router-outlet>
                     </div>
                     
                 </div>
