@@ -27,12 +27,14 @@ export class SharedService {
     new  Product(8,"Playera8","Playera Nueva ideaal para el trabajo o una salida casual, 100% algodon","https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12.jpg" ,120,"001",true)
   ]
 
-  user:Client = new Client("Jorge","Jorge.solis@mail.com",552211447,1,"A");
+ 
 
-  address1:Address = new Address("Calle 21","32","Merida","Yucatan",97302,"Mexico",1,"Casa")
-  address2:Address = new Address("Calle 22","32","Merida","Yucatan",97300,"Mexico",1,"Oficina")
+  address1:Address = new Address(1,"Calle 21","32","Merida","Yucatan",97302,"Mexico",1,"Casa")
+  address2:Address = new Address(2,"Calle 22","32","Merida","Yucatan",97300,"Mexico",1,"Oficina")
 
-  addresses:Address[] = [this.address1,this.address2]
+  addresses:Address[] = [this.address1,this.address2];
+
+  user:Client = new Client("Jorge","Jorge.solis@mail.com",552211447,1,"A",this.addresses);
 
   constructor() { }
 }

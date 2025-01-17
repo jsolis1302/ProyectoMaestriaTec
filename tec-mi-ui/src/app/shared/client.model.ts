@@ -1,3 +1,5 @@
+import { Address } from "./address.model";
+
 export class Client{
 
 
@@ -6,5 +8,7 @@ export class Client{
         public email:string, 
         public phone:number,
         public clientId:number,
-        public clientType:string){}
+        public clientType:string,
+        public addresses:Address[]
+    ){}
 }
