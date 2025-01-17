@@ -9,6 +9,7 @@ export class Client{
         public phone:number,
         public clientId:number,
         public clientType:string,
-        public addresses:Address[]
+        public addresses:Address[],
+        public active:boolean
     ){}
 }

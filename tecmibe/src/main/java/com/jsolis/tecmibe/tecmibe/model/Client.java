@@ -18,6 +18,9 @@ public class Client {
     private double phone;
     private String clientType;
 
+    @Column(columnDefinition = "boolean default true")
+    private boolean active;
+
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
     @JoinColumn(name = "client_id")
     private Set<Address> addresses = new HashSet<>();
@@ -70,5 +73,13 @@ public class Client {
 
     public void setAddresses(Set<Address> addresses) {
         this.addresses = addresses;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
     }
 }

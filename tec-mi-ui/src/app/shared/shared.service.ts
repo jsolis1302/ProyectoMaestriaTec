@@ -34,7 +34,7 @@ export class SharedService {
 
   addresses:Address[] = [this.address1,this.address2];
 
-  user:Client = new Client("Jorge","Jorge.solis@mail.com",552211447,1,"A",this.addresses);
+  user:Client = new Client("Jorge","Jorge.solis@mail.com",552211447,1,"A",this.addresses,true);
 
   constructor() { }
 }
