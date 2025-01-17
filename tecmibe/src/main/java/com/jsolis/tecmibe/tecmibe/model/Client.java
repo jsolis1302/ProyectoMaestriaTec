@@ -15,6 +15,46 @@ public class Client {
     private int clientId;
     private String name;
     private String email;
-    private int phone;
+    private double phone;
     private String clientType;
+
+    public int getClientId() {
+        return clientId;
+    }
+
+    public void setClientId(int clientId) {
+        this.clientId = clientId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public double getPhone() {
+        return phone;
+    }
+
+    public void setPhone(double phone) {
+        this.phone = phone;
+    }
+
+    public String getClientType() {
+        return clientType;
+    }
+
+    public void setClientType(String clientType) {
+        this.clientType = clientType;
+    }
 }
