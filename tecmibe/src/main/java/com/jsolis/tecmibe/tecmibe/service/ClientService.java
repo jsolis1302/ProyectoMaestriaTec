@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ClientService {
@@ -27,5 +28,10 @@ public class ClientService {
             e.printStackTrace();
         }
         return new ResponseEntity<>(new ArrayList<>(), HttpStatus.BAD_REQUEST);
+    }
+
+    public ResponseEntity<Client> getClientById(int clientId){
+        Optional<Client> client = clientDao.findById(clientId);
+        return  new ResponseEntity<>(client.orElse(new Client()),HttpStatus.OK);
     }
 }
