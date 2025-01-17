@@ -1,10 +1,10 @@
 package com.jsolis.tecmibe.tecmibe.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @Entity
@@ -17,6 +17,12 @@ public class Client {
     private String email;
     private double phone;
     private String clientType;
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
+    @JoinColumn(name = "client_id")
+    private Set<Address> addresses = new HashSet<>();
+
+
 
     public int getClientId() {
         return clientId;
@@ -56,5 +62,13 @@ public class Client {
 
     public void setClientType(String clientType) {
         this.clientType = clientType;
+    }
+
+    public Set<Address> getAddresses() {
+        return addresses;
+    }
+
+    public void setAddresses(Set<Address> addresses) {
+        this.addresses = addresses;
     }
 }

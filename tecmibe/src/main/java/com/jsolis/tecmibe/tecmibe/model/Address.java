@@ -21,11 +21,11 @@ public class Address {
     private String country;
     private String name;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    /*@ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "client_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
-    private Client client;
+    //@JsonIgnore
+    private Client client;*/
 
 
     public int getAddressId() {
@@ -91,12 +91,12 @@ public class Address {
     public void setName(String name) {
         this.name = name;
     }
-
+/*
     public Client getClient() {
         return client;
     }
 
     public void setClient(Client client) {
         this.client = client;
-    }
+    }*/
 }
