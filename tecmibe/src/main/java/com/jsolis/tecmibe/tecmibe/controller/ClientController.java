@@ -27,4 +27,9 @@ public class ClientController {
     public ResponseEntity<Client> getClientById(@PathVariable int clientId){
         return clientService.getClientById(clientId);
     }
+
+    @GetMapping("allActiveClients")
+    public ResponseEntity<List<Client>> getAllActiveClients(){
+        return clientService.getAllActiveClients();
+    }
 }

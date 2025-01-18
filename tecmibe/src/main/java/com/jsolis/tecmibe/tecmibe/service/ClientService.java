@@ -34,4 +34,15 @@ public class ClientService {
         Optional<Client> client = clientDao.findById(clientId);
         return  new ResponseEntity<>(client.orElse(new Client()),HttpStatus.OK);
     }
+
+    public ResponseEntity<List<Client>> getAllActiveClients() {
+        try{
+
+            return new ResponseEntity<>(clientDao.findAllByActive(true),HttpStatus.OK);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+        return new ResponseEntity<>(new ArrayList<>(), HttpStatus.BAD_REQUEST);
+    }
 }
