@@ -1,12 +1,10 @@
 package com.jsolis.tecmibe.tecmibe.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.*;
-import lombok.Data;
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
 
-@Data
+import jakarta.persistence.*;
+
+
+
 @Entity
 public class Address {
 
@@ -21,20 +19,14 @@ public class Address {
     private String country;
     private String name;
 
-    /*@ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "client_id", nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
-    //@JsonIgnore
-    private Client client;*/
-
 
     public int getAddressId() {
         return addressId;
     }
 
-    public void setAddressId(int addressId) {
+/*    public void setAddressId(int addressId) {
         this.addressId = addressId;
-    }
+    }*/
 
     public String getStreet() {
         return street;
@@ -91,12 +83,4 @@ public class Address {
     public void setName(String name) {
         this.name = name;
     }
-/*
-    public Client getClient() {
-        return client;
-    }
-
-    public void setClient(Client client) {
-        this.client = client;
-    }*/
 }

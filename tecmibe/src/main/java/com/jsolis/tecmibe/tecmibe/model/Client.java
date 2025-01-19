@@ -1,12 +1,12 @@
 package com.jsolis.tecmibe.tecmibe.model;
 
 import jakarta.persistence.*;
-import lombok.Data;
+
 
 import java.util.HashSet;
 import java.util.Set;
 
-@Data
+
 @Entity
 public class Client {
 
@@ -26,13 +26,21 @@ public class Client {
     private Set<Address> addresses = new HashSet<>();
 
 
+    public Client(){
+
+    }
+
+    public Client(String name, String email, double phone, String clientType, boolean active){
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+        this.clientType = clientType;
+        this.active = active;
+    }
+
 
     public int getClientId() {
         return clientId;
-    }
-
-    public void setClientId(int clientId) {
-        this.clientId = clientId;
     }
 
     public String getName() {

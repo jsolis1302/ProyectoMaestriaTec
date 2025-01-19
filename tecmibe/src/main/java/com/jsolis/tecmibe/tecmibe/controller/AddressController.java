@@ -1,8 +1,10 @@
 package com.jsolis.tecmibe.tecmibe.controller;
 
+
 import com.jsolis.tecmibe.tecmibe.dao.ClientDao;
+import com.jsolis.tecmibe.tecmibe.dao.AddressDao;
+import com.jsolis.tecmibe.tecmibe.exception.ResourceNotFoundException;
 import com.jsolis.tecmibe.tecmibe.model.Address;
-import com.jsolis.tecmibe.tecmibe.model.Client;
 import com.jsolis.tecmibe.tecmibe.service.AddressService;
 import com.jsolis.tecmibe.tecmibe.service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,31 +12,38 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Optional;
 
+@CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("addresses")
+@RequestMapping("/api")
 public class AddressController {
 
     @Autowired
-    ClientService clientService;
+    private ClientService clientService;
 
     @Autowired
-    AddressService addressService;
+    private AddressService addressService;
 
+    @Autowired
+    private ClientDao clientDao;
+
+    @Autowired
+    private AddressDao addressDao;
 
 
 
 /*    @PostMapping("/clients/{clientId}/addresses")
     public ResponseEntity<Address> createAddress(@PathVariable int clientId, @RequestBody Address addressRequest){
-        ResponseEntity<Client> client = clientService.getClientById(clientId);
-
-       Optional<Client> client2 = clientDao.findById(clientId);
-
-        Address address = clientService.getClientById(clientId).map(client ->{
-            client.getAddresses().add(addressRequest);
-            return addressService.saveAddress(addressRequest);
-        });
-        return new ResponseEntity<>(address, HttpStatus.CREATED);
+        return addressService.saveAddress(clientId,addressRequest);
     }*/
+
+    @PostMapping("/clients/{clientId}/addresses")
+    public ResponseEntity<Address> createAddress(@PathVariable(value = "clientId")  int clientId, @RequestBody Address addressRequest){
+        Address address = clientDao.findById(clientId).map(client -> {
+            client.getAddresses().add(addressRequest);
+            return addressDao.save(addressRequest);
+        }).orElseThrow( () -> new ResourceNotFoundException("nor found"));
+
+        return new ResponseEntity<>(address, HttpStatus.CREATED);
+    }
 }
