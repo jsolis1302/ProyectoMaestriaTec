@@ -14,7 +14,7 @@ import java.util.List;
 @Service
 public class ProductService {
     @Autowired
-    private ProductDao productDao;
+    ProductDao productDao;
 
     public ResponseEntity<List<Product>> getAllActiveProducts() {
         try{

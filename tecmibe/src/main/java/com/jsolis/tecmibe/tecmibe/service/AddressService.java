@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Service
 public class AddressService {
     @Autowired
-    private AddressDao addressDao;
+    AddressDao addressDao;
 
 
     public ResponseEntity<Address> saveAddress(Address address) {

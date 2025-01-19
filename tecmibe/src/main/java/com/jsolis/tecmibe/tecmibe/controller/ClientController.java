@@ -16,7 +16,7 @@ import java.util.List;
 public class ClientController {
 
     @Autowired
-    private ClientService clientService;
+    ClientService clientService;
 
     @GetMapping("allClients")
     public ResponseEntity<List<Client>> getAllClients(){

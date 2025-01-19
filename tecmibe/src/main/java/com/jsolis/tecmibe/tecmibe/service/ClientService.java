@@ -17,7 +17,7 @@ import java.util.Optional;
 public class ClientService {
 
     @Autowired
-    private ClientDao clientDao;
+    ClientDao clientDao;
 
     public ResponseEntity<List<Client>> getAllProducts() {
         try{

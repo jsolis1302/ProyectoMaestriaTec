@@ -17,13 +17,13 @@ import java.util.Optional;
 public class AddressController {
 
     @Autowired
-    private ClientService clientService;
+    ClientService clientService;
 
     @Autowired
-    private AddressService addressService;
+    AddressService addressService;
 
-    @Autowired
-    private ClientDao clientDao;
+
+
 
 /*    @PostMapping("/clients/{clientId}/addresses")
     public ResponseEntity<Address> createAddress(@PathVariable int clientId, @RequestBody Address addressRequest){
