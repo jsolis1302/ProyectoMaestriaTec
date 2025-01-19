@@ -9,7 +9,7 @@ import java.util.List;
 @Repository
 public interface ClientDao extends JpaRepository<Client,Integer>{
 
-    List<Client> findAllByActive(boolean active);
+     List<Client> findAllByActive(boolean active);
 
 
 }

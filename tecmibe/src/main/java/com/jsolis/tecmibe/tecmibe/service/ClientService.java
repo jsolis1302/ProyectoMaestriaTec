@@ -17,7 +17,7 @@ import java.util.Optional;
 public class ClientService {
 
     @Autowired
-    ClientDao clientDao;
+    private ClientDao clientDao;
 
     public ResponseEntity<List<Client>> getAllProducts() {
         try{
@@ -31,8 +31,10 @@ public class ClientService {
     }
 
     public ResponseEntity<Client> getClientById(int clientId){
-        Optional<Client> client = clientDao.findById(clientId);
-        return  new ResponseEntity<>(client.orElse(new Client()),HttpStatus.OK);
+        //Optional<Client> client = clientDao.findById(clientId);
+        //return  new ResponseEntity<>(client.orElse(new Client()),HttpStatus.OK);
+
+        return  new ResponseEntity<>(clientDao.findById(clientId).orElse(new Client()),HttpStatus.OK);
     }
 
     public ResponseEntity<List<Client>> getAllActiveClients() {
