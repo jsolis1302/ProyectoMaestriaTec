@@ -1,6 +1,7 @@
 package com.jsolis.tecmibe.tecmibe.service;
 
 import com.jsolis.tecmibe.tecmibe.dao.ProductDao;
+import com.jsolis.tecmibe.tecmibe.model.Client;
 import com.jsolis.tecmibe.tecmibe.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -36,5 +37,10 @@ public class ProductService {
             e.printStackTrace();
         }
         return new ResponseEntity<>(new ArrayList<>(), HttpStatus.BAD_REQUEST);
+    }
+
+    public ResponseEntity<Product> getProductById(long productId){
+
+        return  new ResponseEntity<>(productDao.findById(productId).orElse(new Product()),HttpStatus.OK);
     }
 }

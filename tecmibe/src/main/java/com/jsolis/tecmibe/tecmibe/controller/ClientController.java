@@ -24,7 +24,7 @@ public class ClientController {
     }
 
     @GetMapping("/client/{clientId}")
-    public ResponseEntity<Client> getClientById(@PathVariable int clientId){
+    public ResponseEntity<Client> getClientById(@PathVariable long clientId){
         return clientService.getClientById(clientId);
     }
 
