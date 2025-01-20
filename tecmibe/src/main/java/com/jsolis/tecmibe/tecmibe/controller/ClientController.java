@@ -12,23 +12,23 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("clients")
+@RequestMapping("/api/clients")
 public class ClientController {
 
     @Autowired
     ClientService clientService;
 
-    @GetMapping("allClients")
+    @GetMapping("/allClients")
     public ResponseEntity<List<Client>> getAllClients(){
         return clientService.getAllProducts();
     }
 
-    @GetMapping("client/{clientId}")
+    @GetMapping("/client/{clientId}")
     public ResponseEntity<Client> getClientById(@PathVariable int clientId){
         return clientService.getClientById(clientId);
     }
 
-    @GetMapping("allActiveClients")
+    @GetMapping("/allActiveClients")
     public ResponseEntity<List<Client>> getAllActiveClients(){
         return clientService.getAllActiveClients();
     }
