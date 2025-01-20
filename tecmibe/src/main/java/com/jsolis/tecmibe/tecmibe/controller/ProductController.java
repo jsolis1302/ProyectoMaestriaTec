@@ -12,19 +12,19 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("products")
+@RequestMapping("/api/products")
 //@CrossOrigin(origins="http://localhost:4200")
 
 public class ProductController {
     @Autowired
     ProductService productService;
 
-    @GetMapping("allActiveProducts")
+    @GetMapping("/allActiveProducts")
     public ResponseEntity <List<Product>> getAllActiveProducts(){
         return productService.getAllActiveProducts();
     }
 
-    @GetMapping("allProducts")
+    @GetMapping("/allProducts")
     public ResponseEntity <List<Product>> getAllProducts(){
         return productService.getAllProducts();
     }

@@ -1,17 +1,14 @@
 package com.jsolis.tecmibe.tecmibe.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
+import jakarta.persistence.*;
 
 
 @Entity
+@Table(name = "products")
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int productId;
+    private long id;
     private String name;
     private String description;
     private String imagePath;
@@ -19,13 +16,13 @@ public class Product {
     private String code;
     private boolean active;
 
-    public int getProductId() {
-        return productId;
+    public long getProductId() {
+        return id;
     }
 
-    public void setProductId(int productId) {
+/*    public void setProductId(int productId) {
         this.productId = productId;
-    }
+    }*/
 
     public String getName() {
         return name;
