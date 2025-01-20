@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface ClientDao extends JpaRepository<Client,Integer>{
+public interface ClientDao extends JpaRepository<Client,Long>{
 
      List<Client> findAllByActive(boolean active);
 

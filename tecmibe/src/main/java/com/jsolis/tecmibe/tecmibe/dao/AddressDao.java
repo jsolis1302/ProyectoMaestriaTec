@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 @Repository
-public interface AddressDao extends JpaRepository<Address,Integer>{
+public interface AddressDao extends JpaRepository<Address,Long>{
 }

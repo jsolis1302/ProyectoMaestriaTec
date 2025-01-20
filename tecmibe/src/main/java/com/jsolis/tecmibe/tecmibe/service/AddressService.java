@@ -24,7 +24,7 @@ public class AddressService {
     ClientDao clientDao;
 
 
-    public ResponseEntity<Address> saveAddress(int clientId,Address addressRequest) {
+    public ResponseEntity<Address> saveAddress(Long clientId,Address addressRequest) {
 
         Address address =  clientDao.findById(clientId).map(client ->{
             client.getAddresses().add(addressRequest);

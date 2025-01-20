@@ -6,11 +6,12 @@ import jakarta.persistence.*;
 
 
 @Entity
+@Table(name = "addresses")
 public class Address {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int addressId;
+    private Long id;
     private String street;
     private String numb;
     private String city;
@@ -20,13 +21,10 @@ public class Address {
     private String name;
 
 
-    public int getAddressId() {
-        return addressId;
+    public Long getId() {
+        return id;
     }
 
-/*    public void setAddressId(int addressId) {
-        this.addressId = addressId;
-    }*/
 
     public String getStreet() {
         return street;

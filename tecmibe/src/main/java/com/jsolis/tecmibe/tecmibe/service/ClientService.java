@@ -30,7 +30,7 @@ public class ClientService {
         return new ResponseEntity<>(new ArrayList<>(), HttpStatus.BAD_REQUEST);
     }
 
-    public ResponseEntity<Client> getClientById(int clientId){
+    public ResponseEntity<Client> getClientById(long clientId){
         //Optional<Client> client = clientDao.findById(clientId);
         //return  new ResponseEntity<>(client.orElse(new Client()),HttpStatus.OK);
 

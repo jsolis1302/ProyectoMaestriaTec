@@ -38,7 +38,7 @@ public class AddressController {
     }*/
 
     @PostMapping("/clients/{clientId}/addresses")
-    public ResponseEntity<Address> createAddress(@PathVariable(value = "clientId")  int clientId, @RequestBody Address addressRequest){
+    public ResponseEntity<Address> createAddress(@PathVariable(value = "clientId")  Long clientId, @RequestBody Address addressRequest){
         Address address = clientDao.findById(clientId).map(client -> {
             client.getAddresses().add(addressRequest);
             return addressDao.save(addressRequest);

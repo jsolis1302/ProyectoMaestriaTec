@@ -8,11 +8,12 @@ import java.util.Set;
 
 
 @Entity
+@Table(name = "clients")
 public class Client {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int clientId;
+    private long id;
     private String name;
     private String email;
     private double phone;
@@ -39,8 +40,8 @@ public class Client {
     }
 
 
-    public int getClientId() {
-        return clientId;
+    public long getClientId() {
+        return id;
     }
 
     public String getName() {
