@@ -1,14 +1,11 @@
 package com.jsolis.tecmibe.tecmibe.controller;
 
 
-import com.jsolis.tecmibe.tecmibe.dao.ClientDao;
-import com.jsolis.tecmibe.tecmibe.dao.AddressDao;
-import com.jsolis.tecmibe.tecmibe.exception.ResourceNotFoundException;
+
 import com.jsolis.tecmibe.tecmibe.model.Address;
 import com.jsolis.tecmibe.tecmibe.service.AddressService;
 import com.jsolis.tecmibe.tecmibe.service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,11 +21,11 @@ public class AddressController {
     @Autowired
     private AddressService addressService;
 
-    @Autowired
+/*    @Autowired
     private ClientDao clientDao;
 
     @Autowired
-    private AddressDao addressDao;
+    private AddressDao addressDao;*/
 
 
 
