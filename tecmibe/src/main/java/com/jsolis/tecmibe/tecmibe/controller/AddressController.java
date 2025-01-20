@@ -32,12 +32,12 @@ public class AddressController {
 
 
 
-/*    @PostMapping("/clients/{clientId}/addresses")
-    public ResponseEntity<Address> createAddress(@PathVariable int clientId, @RequestBody Address addressRequest){
-        return addressService.saveAddress(clientId,addressRequest);
-    }*/
-
     @PostMapping("/clients/{clientId}/addresses")
+    public ResponseEntity<Address> createAddress(@PathVariable Long clientId, @RequestBody Address addressRequest){
+        return addressService.saveAddress(clientId,addressRequest);
+    }
+
+/*    @PostMapping("/clients/{clientId}/addresses")
     public ResponseEntity<Address> createAddress(@PathVariable(value = "clientId")  Long clientId, @RequestBody Address addressRequest){
         Address address = clientDao.findById(clientId).map(client -> {
             client.getAddresses().add(addressRequest);
@@ -45,5 +45,5 @@ public class AddressController {
         }).orElseThrow( () -> new ResourceNotFoundException("nor found"));
 
         return new ResponseEntity<>(address, HttpStatus.CREATED);
-    }
+    }*/
 }
