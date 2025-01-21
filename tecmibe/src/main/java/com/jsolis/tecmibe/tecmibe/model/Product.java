@@ -16,6 +16,17 @@ public class Product {
     private String code;
     private boolean active;
 
+    public Product(String name, String description, String imagePath, double price, String code, boolean active) {
+        this.name = name;
+        this.description = description;
+        this.imagePath = imagePath;
+        this.price = price;
+        this.code = code;
+        this.active = active;
+    }
+
+    public Product(){}
+
     public long getProductId() {
         return id;
     }

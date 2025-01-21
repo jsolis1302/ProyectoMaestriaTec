@@ -30,4 +30,9 @@ public class ProductController {
     public ResponseEntity <Product> getProductById(@PathVariable long productId){
         return productService.getProductById(productId);
     }
+
+    @PostMapping("/product")
+    public ResponseEntity<Product> createProduct(@RequestBody Product productRequest){
+        return productService.saveProduct(productRequest);
+    }
 }

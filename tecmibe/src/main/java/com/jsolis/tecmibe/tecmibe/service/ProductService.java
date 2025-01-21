@@ -43,4 +43,9 @@ public class ProductService {
 
         return  new ResponseEntity<>(productDao.findById(productId).orElse(new Product()),HttpStatus.OK);
     }
+
+    public ResponseEntity<Product> saveProduct(Product productRequest){
+        Product product = productDao.save(new Product(productRequest.getName(),productRequest.getDescription(),productRequest.getImagePath(),productRequest.getPrice(),productRequest.getCode(),true));
+        return new ResponseEntity<>(product,HttpStatus.CREATED);
+    }
 }
