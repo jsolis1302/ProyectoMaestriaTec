@@ -21,26 +21,9 @@ public class AddressController {
     @Autowired
     private AddressService addressService;
 
-/*    @Autowired
-    private ClientDao clientDao;
-
-    @Autowired
-    private AddressDao addressDao;*/
-
-
-
     @PostMapping("/clients/{clientId}/addresses")
     public ResponseEntity<Address> createAddress(@PathVariable Long clientId, @RequestBody Address addressRequest){
         return addressService.saveAddress(clientId,addressRequest);
     }
-
-/*    @PostMapping("/clients/{clientId}/addresses")
-    public ResponseEntity<Address> createAddress(@PathVariable(value = "clientId")  Long clientId, @RequestBody Address addressRequest){
-        Address address = clientDao.findById(clientId).map(client -> {
-            client.getAddresses().add(addressRequest);
-            return addressDao.save(addressRequest);
-        }).orElseThrow( () -> new ResourceNotFoundException("nor found"));
-
-        return new ResponseEntity<>(address, HttpStatus.CREATED);
-    }*/
+    
 }
