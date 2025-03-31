@@ -12,7 +12,8 @@ export class ShoppingListComponent implements OnInit {
 
   cartItems:Item[]=[];
 
-  total = this.cartItems.reduce((sum, current) => sum + (current.qty * current.product.price), 0);
+  //total = this.cartItems.reduce((sum, current) => sum + (current.qty * current.product.price), 0);
+  total = 417;
   constructor(private sharedService:SharedService) {}
   ngOnInit(): void {
     this.cartItems = this.sharedService.cartItems

@@ -8,10 +8,13 @@ import { UserInfoComponent } from './users/user-info/user-info.component';
 import { AddressListComponent } from './users/address-list/address-list.component';
 import { OrderComponent } from './orders/order/order.component';
 import { UserListComponent } from './users/user-list/user-list.component';
+import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
+  
   { path: '', redirectTo: '/products', pathMatch: 'full' },
+  { path: 'login', component:LoginComponent },
   { path: 'products', component:ProductComponent},
   { path: 'user', component: UserComponent, 
     children:[

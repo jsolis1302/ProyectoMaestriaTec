@@ -21,6 +21,7 @@ import { AddressListComponent } from './users/address-list/address-list.componen
 import { AddressItemComponent } from './users/address-list/address-item/address-item.component';
 import { OrderComponent } from './orders/order/order.component';
 import { UserListComponent } from './users/user-list/user-list.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -41,6 +42,7 @@ import { UserListComponent } from './users/user-list/user-list.component';
     AddressItemComponent,
     OrderComponent,
     UserListComponent,
+    LoginComponent,
 
   ],
   imports: [
